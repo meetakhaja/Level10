@@ -446,6 +446,7 @@ body {
   border-radius: 50px;
   padding: 10px 30px;
   margin-top: 3vw;
+  border: 1px solid #0a3cce;
 }
 #page14 {
   background-color: #0f0f17;
@@ -454,6 +455,7 @@ body {
   width: 100%;
 }
 .page14-inner {
+  position: relative;
   height: 33.3;
   width: 100%;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
@@ -468,13 +470,26 @@ body {
   font-family: meet;
   font-weight: 100;
   color: white;
+  position: relative;
+  z-index: 99;
 }
 .page14-inner > i {
   color: white;
   font-size: 2.5vw;
+  position: relative;
+  z-index: 99;
 }
-.page14-inner:hover {
+.center14 {
+  height: 0%;
+  width: 100%;
   background-color: #0a3cce;
-  transition: all ease-in;
-  transition-duration: 0.3s;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: all ease 0.5s;
+}
+.page14-inner:hover .center14 {
+  height: 100%;
+  width: 100%;
 }
